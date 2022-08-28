@@ -15,19 +15,19 @@
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "ko-KR"
 title                    : "DOBBYNOTES"
-title_separator          : "-"
-subtitle                 : jinyongyun's efforts
+title_separator          : "|"
+subtitle                 : Dobby's efforts
 name                     : "jinyongyun"
 description              : "dobby is free spirit coder"
 url                      :  "https://jinyongyun.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # "/assets/images/500x300.png"
-logo                     : # "/assets/images/88x88.png"
+logo                     : "/assets/images/CodingDobby.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
+breadcrumbs            : true
 words_per_minute         : 200
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
@@ -105,9 +105,9 @@ analytics:
 # Site Author
 author:
   name             : "Jinyongyun"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/DobbyRed.png"
   bio              : "IOS JUNIOR DEVELOPER"
-  location         : "Daejeon"
+  location         : "ILOVEDaejeon"
   email            : "dbswlsdyd730@naver.com"
   links:
     - label: "Email"
@@ -290,3 +290,4 @@ defaults:
       comments: # true
       share: true
       related: true
+      show_date: true
