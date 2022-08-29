@@ -31,10 +31,12 @@ var 변수명:데이터 타입 = 값
 
 
 <pre>
-</code>
+<code>
+
 import Foundation
 let a: Int = 100
 var b: Int = 200
+
 </code>
 </pre>
 
