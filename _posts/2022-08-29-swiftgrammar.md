@@ -222,37 +222,27 @@ return 반환값
 
 func sum(a: Int, b: Int) -> Int {
 
- 
-
 return a+b
 
- 
-
 }
-
- 
 
 sum(a: 5, b: 3)
 
- 
-
- 
-
 func hello() -> String { //매개변수 없는 함수
-
- 
 
 return "hello"
 
- 
-
 }
-
- 
 
 hello()
 
- 
+
+</code>
+</pre>
+
+<pre>
+<code>
+
 
 func printName() -> Void {
 
@@ -260,11 +250,15 @@ func printName() -> Void {
 
 }
 
- 
+</code>
+</pre>
+
 
 또는
 
  
+ <pre>
+ <code>
 
 func printName() {
 
@@ -272,7 +266,12 @@ func printName() {
 
 }
 
+ </code>
+ </pre>
  
+
+<pre>
+<code>
 
 func greeting(friend: String, me: String = "jinyong"){
 
@@ -284,9 +283,17 @@ func greeting(friend: String, me: String = "jinyong"){
 
 greeting(friend: "Albert")
 
+ </code>
+ </pre>
  
 
+
+
+
 //전달인자레이블 사용
+
+<pre>
+<code>
 
 func sendMessage(from myName: String, to name: String) -> String{
 
@@ -298,49 +305,47 @@ return "Hello \(name)! I'm \(myName)"
 
 sendMessage(from: "Gunter", to: "Json")
 
+ </code>
+ </pre>
+ 
+ 
+ 
+ 
+ 
  
 
 //와일드카드(바로 값 넘겨주기)
-
- 
-
+<pre>
+<code>
 func sendMessage(_ name: String) -> String {
 
 return "Hello \(name)"
 
- 
-
 }
 
- 
-
 sendMessage("윤진용")
-
+</code>
+</pre>
  
 
+
+<pre>
+</code>
 //가변매개변수
-
- 
-
 func sendMessage(me: String, friends: String. . .) -> String {
 
  return "Hello \(friends)! I'm \(me)"
 
 }
 
- 
-
 sendMessage(me: "Jinyong", friends: "Jonson", "aiensert", "serius")
 
 </code>
  </pre>
- 
 
 가변 매개변수로 선언되어 있으면 배열을 받을 수 있다고 생각하면 쉽다
 
- 
-
-스위프트의 함수는 일급 객체이다. 그래서 함수를 변수로 할당 할 수도 있고 매개변수에 집어넣을 수도 있다.
+##### 스위프트의 함수는 일급 객체이다. 그래서 함수를 변수로 할당 할 수도 있고 매개변수에 집어넣을 수도 있다.
 
  
 
@@ -349,12 +354,11 @@ sendMessage(me: "Jinyong", friends: "Jonson", "aiensert", "serius")
  
 
 주어진 조건에 따라 다르게 동작하도록 하는 문
-
- 
-
 if, switch, guard 문이 있다
 
  
+<pre>
+<code>
 
 import UIKit
 
@@ -548,13 +552,16 @@ default:
 
  print("이상 기후입니다")
 
+
+</code>
+</pre>
  
 
  
 
  
 
-반복문
+## 반복문
 
  
 
@@ -572,7 +579,8 @@ repeat-while
 
  
 
- 
+ <pre>
+ <code>
 
 /*
 
@@ -592,11 +600,14 @@ print(i)
 
 }
 
- 
+</code>
+</pre>
 
 -> 1,2,3,4 차례대로 출력
 
  
+ <pre>
+ <code>
 
 let array = [1,2,3,4,5]
 
@@ -606,13 +617,16 @@ for i in array {
 
 }
 
+</code>
+</pre>
  
 
 이렇게 범위 데이터에 배열을 넣을 수 있다
 
  
 
- 
+ <pre>
+ <code>
 
 /*
 
@@ -635,11 +649,14 @@ while number < 10 {
 
 }
 
- 
+ </code>
+ </pre>
 
  
 
  
+<pre>
+<code>
 
 /*
 
@@ -667,7 +684,9 @@ x+=2
 
 print(x)
 
- 
+</code>
+</pre>
+
 
 ->적어도 한 번은 반드시 구문을 실행한다.
 
@@ -677,99 +696,65 @@ print(x)
 
  
 
-**옵셔널**
+## 옵셔널
 
 값이 있을 수도 있고 없을 수도 있다
 
 (선택적인)
 
  
-
 var name: String=""
 
 이녀석은 값이 있는 걸까 없는 걸까
 
- 
-
 정확히 말하자면 빈 문자열이라는 값을 갖고 있는 것이다.
 
- 
-
 값이 없는 경우는 바로
-
- 
-
 var name: String=nil
-
- 
 
 이렇게 nil이 되는 것이다
 
- 
-
 var number:Int? = nil
-
- 
 
 이 경우도 마찬가지
 
- 
-
 그렇다고 모든 경우에 nil을 넣을 수 있는 것이 아니라
-
- 
 
 위의 경우와 같이 값이 있을수도 있고 없을 수도 있는 변수를 정의할 때
 
 타입 뒤에 ? 물음표를 붙여줘야 nil을 지정해줄 수 있다.
 
- 
-
 이렇게 정의한 변수를 우리는 철수 아니 옵셔널이라고 부른다
 
 옵셔널의 경우 기본값은 nil이다
 
- 
-
 일반적인 프로그래밍 언어에서는 값이 nil인 변수에 접근하면 런타임 에러가 발생해 프로그램이 종료된다 하지만 스위프트는 안전성 때문에 특이하게 값이 nil인 변수에 접근해도 프로그램이 종료되지 않는다.
 
- 
-
- 
-
- 
+<pre>
+<code>
 
 import UIKit
 
- 
-
 var name: String?
 
- 
-
+</code>
+</pre>
 -> 이거 실행하면 그냥 nil 나옴
-
- 
 
 그리고 옵셔널 타입에는 일반값도 넣을 수 있다
 
- 
-
+<pre>
+<code>
 var optionalName: String? = "Jinyong"
-
- 
-
 // var requiredName: String = optionalName
 
- 
+ </code>
+ </pre>
 
 이런 경우 에러가 난다. requiredName은 옵셔널이 아닌 String타입이므로 값이 꼭 있어야 하고, optionalName이 옵셔널 타입이므로 이 녀석이 실행되기 전까지 값이 있나 없나를 모르기 때문 
 
  
-
 따라서 swift는 안전을 위해 이런 경우를 금지한다
-
- 
 
 이때 발생하는 에러는 optionalName이라는 변수의 옵셔널 포장지를 벗기라는 에러가 뜨는데
 
@@ -779,7 +764,7 @@ optionalName변수를 출력해 보면 Optional("Jinyong") 처럼 옵셔널 포�
 
  
 
-**옵셔널** **바인딩**
+## 옵셔널 바인딩
 
 옵셔널 해제 방법에는 명시적 해제와 묵시적 해제가 있다
 
