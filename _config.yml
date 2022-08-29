@@ -15,6 +15,8 @@
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
+header:
+  image: /assets/images/CodingDobbyRedBlog.png
 locale                   : "ko-KR"
 title                    : "DOBBYNOTES"
 title_separator          : "|"
