@@ -117,9 +117,7 @@ Set
 
 <pre>
 <code>
-
 import UIKit
-
 var numbers: Array<Int> = Array<Int>()
 
 numbers.append(1)
@@ -127,8 +125,6 @@ numbers.append(1)
 numbers.append(3)
 
 numbers.append(2)
-
- 
 
 numbers[0]
 
@@ -145,7 +141,10 @@ numbers
 </code>
 </pre>
  
- // index 2번에 4를 집어넣음 
+// index 2번에 4를 집어넣음 
+ 
+ 
+ 
  
 <pre>
 <code>
@@ -153,8 +152,6 @@ numbers
 var names = [String]()
 
 var names: [String] = []
-
-
 
 var dic: [String: Int] = ["윤진용": 1]
 
@@ -164,15 +161,11 @@ dic["김지"] = 5
 
 dic
 
- 
-
 dic.removeValue(forKey: "김민지")
 </code>
 </pre>
  
 //var dic: Dictionary<String, Int> = Dictionary<String, Int>()
-
-
 
 
 <pre>
@@ -198,7 +191,7 @@ set.remove(20)
 
 //set는 축약형 형태가 따로 없다!
 
-## 
+## 함수
 
 함수는 작업의 가장 작은 단위 그리고 코드의 집합이다
 계속해서 중복되는 코드를 줄이기 위해 사용한다
@@ -209,8 +202,6 @@ return 반환값
 
 }
 
-
- 
  
 <pre>
 <code>
@@ -231,9 +222,11 @@ return "hello"
 
 hello()
 
-
 </code>
 </pre>
+
+
+
 
 <pre>
 <code>
