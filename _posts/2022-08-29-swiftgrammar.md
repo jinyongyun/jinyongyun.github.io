@@ -114,9 +114,9 @@ Set
 그냥 집합이라고 생각하자
 자바와 자료구조 시간에 배운 것이기에 세부적인 사항은 넘어간다
 
-
 <pre>
 <code>
+
 import UIKit
 var numbers: Array<Int> = Array<Int>()
 
@@ -141,10 +141,6 @@ numbers
 </code>
 </pre>
  
-// index 2번에 4를 집어넣음 
- 
- 
- 
  
 <pre>
 <code>
@@ -162,29 +158,21 @@ dic["김지"] = 5
 dic
 
 dic.removeValue(forKey: "김민지")
+
 </code>
 </pre>
  
 //var dic: Dictionary<String, Int> = Dictionary<String, Int>()
 
-
 <pre>
 <code>
-
 var set: Set = Set<Int>()
-
 set.insert(10)
-
 set.insert(20)
-
 set.insert(30)
-
 set.insert(30)
-
 set.insert(30)
-
 set.remove(20)
-
 </code>
 </pre>
 
