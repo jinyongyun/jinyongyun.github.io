@@ -143,14 +143,11 @@ numbers
 numbers.remove(at:0)
 
 numbers
-
- </code>
- </pre>
+</code>
+</pre>
  
  // index 2번에 4를 집어넣음 
  
- 
-
 <pre>
 <code>
 
