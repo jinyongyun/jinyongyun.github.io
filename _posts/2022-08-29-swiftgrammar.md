@@ -120,8 +120,6 @@ Set
 
 import UIKit
 
- 
-
 var numbers: Array<Int> = Array<Int>()
 
 numbers.append(1)
@@ -143,6 +141,7 @@ numbers
 numbers.remove(at:0)
 
 numbers
+
 </code>
 </pre>
  
@@ -168,11 +167,10 @@ dic
  
 
 dic.removeValue(forKey: "김민지")
-
- </code>
- </pre>
+</code>
+</pre>
  
- //var dic: Dictionary<String, Int> = Dictionary<String, Int>()
+//var dic: Dictionary<String, Int> = Dictionary<String, Int>()
 
 
 
@@ -200,9 +198,7 @@ set.remove(20)
 
 //set는 축약형 형태가 따로 없다!
 
-
-
-## 함수
+## 
 
 함수는 작업의 가장 작은 단위 그리고 코드의 집합이다
 계속해서 중복되는 코드를 줄이기 위해 사용한다
