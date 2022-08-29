@@ -66,6 +66,8 @@ var b: Int = 200
 
 
 ex)
+
+
 <pre>
 <code>
 var someCharacter : Character = "가"
@@ -79,14 +81,12 @@ var someCharacter : Character = "가"
 
 
 
-###### 스위프트는 타입 추론을 할 수 있다
+## 스위프트는 타입 추론을 할 수 있다
 
  : 따라서 변수나 상수명 뒤에 특정 타입을 명시하지 않아도 컴파일러가 알아서 타입을 추론하여 타입을 결정해준다.
 
 var number = 10
 그냥 이렇게 써줘도 'Int형 타입이구나' 라고 추론한다
-
- 
 
  
 ## 컬렉션 타입
@@ -95,17 +95,17 @@ var number = 10
 
 스위프트의 컬렉션 타입에는 크게 Array, Dictionary, Set가 있다.
 
-### Array 
+Array 
 
 데이터 타입의 값들을 순서대로 지정하는 리스트
 
 우리가 흔히 아는 배열이다
 
-### Dictionary 
+Dictionary 
 
 키와 값의 쌍으로 데이터를 저장하는 컬렉션 타입
 
-### Set 
+Set 
 
 같은 데이터 타입의 값을 순서 없이 저장하는 리스트
 
