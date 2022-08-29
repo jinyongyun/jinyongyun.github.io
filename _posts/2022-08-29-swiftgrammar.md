@@ -176,13 +176,12 @@ dic.removeValue(forKey: "김민지")
  //var dic: Dictionary<String, Int> = Dictionary<String, Int>()
 
 
+
+
 <pre>
 <code>
 
 var set: Set = Set<Int>()
-
-
- 
 
 set.insert(10)
 
@@ -194,28 +193,20 @@ set.insert(30)
 
 set.insert(30)
 
- 
-
 set.remove(20)
 
- 
-
- 
- </code>
- <pre>
+</code>
+</pre>
 
 
 //set는 축약형 형태가 따로 없다!
 
 
 
- ## 함수
+## 함수
 
-
- 함수는 작업의 가장 작은 단위 그리고 코드의 집합이다
-
- 계속해서 중복되는 코드를 줄이기 위해 사용한다
-
+함수는 작업의 가장 작은 단위 그리고 코드의 집합이다
+계속해서 중복되는 코드를 줄이기 위해 사용한다
  
 func 함수명(파라미터 이름: 데이터 타입)->반환타입 {
 
