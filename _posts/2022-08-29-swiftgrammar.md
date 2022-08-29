@@ -24,34 +24,17 @@ search: true
 쉽게 말해 상수는 어떠한 값을 넣어도 변하지 않는다
 
 상수는 
-
-
-
-
-
-[Bold] ** let 상수명:데이터 타입 = 값 **
-
- 
-
+let 상수명:데이터 타입 = 값 
 변수는
-
- 
-
-###### var 변수명:데이터 타입 = 값
-
- 
-
+var 변수명:데이터 타입 = 값
 이렇게 사용을 한다.
-
 
 
 <pre>
 </code>
-
 import Foundation
 let a: Int = 100
 var b: Int = 200
-
 </code>
 </pre>
 
