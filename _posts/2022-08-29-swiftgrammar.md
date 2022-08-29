@@ -216,8 +216,15 @@ set.remove(20)
  </code>
  <pre>
 
- 
- ## 함수
+
+
+
+
+
+
+
+
+ ## 함수 
 
  함수는 작업의 가장 작은 단위 그리고 코드의 집합이다
 
@@ -234,6 +241,8 @@ return 반환값
  *
  
  
+<pre>
+<code>
 
 func sum(a: Int, b: Int) -> Int {
 
@@ -347,6 +356,8 @@ func sendMessage(me: String, friends: String. . .) -> String {
 
 sendMessage(me: "Jinyong", friends: "Jonson", "aiensert", "serius")
 
+</code>
+ </pre>
  
 
 가변 매개변수로 선언되어 있으면 배열을 받을 수 있다고 생각하면 쉽다
@@ -357,7 +368,7 @@ sendMessage(me: "Jinyong", friends: "Jonson", "aiensert", "serius")
 
  
 
-조건문
+## 조건문
 
  
 
