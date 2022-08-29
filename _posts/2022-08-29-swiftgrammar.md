@@ -50,67 +50,60 @@ var b: Int = 200
 ## 스위프트의 기본 데이터 타입
 
 
-[Italic] Int : 64bit 정수형
+* Int : 64bit 정수형
 
-[Italic] UInt : 부호가 없는 64bit 정수형
+* UInt : 부호가 없는 64bit 정수형
 
-[Italic] Float: 32bit 부동 소수점 (Float 변수에 정수를 저장해도 자동으로 부동 소수점으로 변환)
+* Float: 32bit 부동 소수점 (Float 변수에 정수를 저장해도 자동으로 부동 소수점으로 변환)
 
-[Italic] Double : 64bit 부동 소수점
+* Double : 64bit 부동 소수점
 
-[Italic] Bool : true, false 값
+* Bool : true, false 값
 
-[Italic] Character : 문자                
+* Character : 문자                
+
 
 ex)
-
+<pre>
+<code>
 var someCharacter : Character = "가"
-
+</code>
+</pre>
  
 
-[Italic] String : 문자열
+* String : 문자열
 
-Any: 모든 타입을 자칭하는 키워드(어떤 타입이든 다 가질 수 있다)
+* Any: 모든 타입을 자칭하는 키워드(어떤 타입이든 다 가질 수 있다)
 
- ' ' '
+
 
 ###### 스위프트는 타입 추론을 할 수 있다
 
  : 따라서 변수나 상수명 뒤에 특정 타입을 명시하지 않아도 컴파일러가 알아서 타입을 추론하여 타입을 결정해준다.
 
- 
-
 var number = 10
-
- 
-
 그냥 이렇게 써줘도 'Int형 타입이구나' 라고 추론한다
 
  
 
  
-
 ## 컬렉션 타입
 
 컬렉션 타입은 데이터들의 집합 또는 묶음이다
 
 스위프트의 컬렉션 타입에는 크게 Array, Dictionary, Set가 있다.
 
-[Bold] * Array *
+### Array 
 
 데이터 타입의 값들을 순서대로 지정하는 리스트
 
 우리가 흔히 아는 배열이다
 
- 
-
-[Bold] * Dictionary *
+### Dictionary 
 
 키와 값의 쌍으로 데이터를 저장하는 컬렉션 타입
 
- 
-
-[Bold] * Set *
+### Set 
 
 같은 데이터 타입의 값을 순서 없이 저장하는 리스트
 
@@ -141,7 +134,7 @@ numbers[0]
 
 numbers[1]
 
-numbers.insert(4, at:2) // index 2번에 4를 집어넣음 
+numbers.insert(4, at:2) 
 
 numbers
 
@@ -149,15 +142,21 @@ numbers.remove(at:0)
 
 numbers
 
+ </code>
+ </pre>
  
+ // index 2번에 4를 집어넣음 
+ 
+ 
+
+<pre>
+<code>
 
 var names = [String]()
 
 var names: [String] = []
 
- 
 
-//var dic: Dictionary<String, Int> = Dictionary<String, Int>()
 
 var dic: [String: Int] = ["윤진용": 1]
 
@@ -171,11 +170,17 @@ dic
 
 dic.removeValue(forKey: "김민지")
 
+ </code>
+ </pre>
  
+ //var dic: Dictionary<String, Int> = Dictionary<String, Int>()
+
+
+<pre>
+<code>
 
 var set: Set = Set<Int>()
 
-//set는 축약형 형태가 따로 없다!
 
  
 
@@ -200,28 +205,25 @@ set.remove(20)
  <pre>
 
 
+//set는 축약형 형태가 따로 없다!
 
 
 
+ ## 함수
 
-
-
-
- ## 함수 
 
  함수는 작업의 가장 작은 단위 그리고 코드의 집합이다
 
  계속해서 중복되는 코드를 줄이기 위해 사용한다
 
  
-[Bold] *
 func 함수명(파라미터 이름: 데이터 타입)->반환타입 {
 
 return 반환값
 
 }
 
- *
+
  
  
 <pre>
