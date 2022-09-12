@@ -86,7 +86,7 @@ var number = 10
 
  
 
- 
+
 ## 컬렉션 타입
 
 컬렉션 타입은 데이터들의 집합 또는 묶음이다
@@ -144,9 +144,9 @@ numbers
 
  </code>
  </pre>
- 
+
  // index 2번에 4를 집어넣음 
- 
+
  
 
 <pre>
@@ -172,7 +172,7 @@ dic.removeValue(forKey: "김민지")
 
  </code>
  </pre>
- 
+
  //var dic: Dictionary<String, Int> = Dictionary<String, Int>()
 
 
@@ -207,7 +207,7 @@ set.remove(20)
 
 함수는 작업의 가장 작은 단위 그리고 코드의 집합이다
 계속해서 중복되는 코드를 줄이기 위해 사용한다
- 
+
 func 함수명(파라미터 이름: 데이터 타입)->반환타입 {
 
 return 반환값
@@ -215,8 +215,8 @@ return 반환값
 }
 
 
- 
- 
+
+
 <pre>
 <code>
 
@@ -256,7 +256,7 @@ func printName() -> Void {
 
 또는
 
- 
+
  <pre>
  <code>
 
@@ -268,7 +268,7 @@ func printName() {
 
  </code>
  </pre>
- 
+
 
 <pre>
 <code>
@@ -285,7 +285,7 @@ greeting(friend: "Albert")
 
  </code>
  </pre>
- 
+
 
 
 
@@ -307,11 +307,11 @@ sendMessage(from: "Gunter", to: "Json")
 
  </code>
  </pre>
+
  
+
  
- 
- 
- 
+
  
 
 //와일드카드(바로 값 넘겨주기)
@@ -326,7 +326,7 @@ return "Hello \(name)"
 sendMessage("윤진용")
 </code>
 </pre>
- 
+
 
 
 <pre>
@@ -356,7 +356,7 @@ sendMessage(me: "Jinyong", friends: "Jonson", "aiensert", "serius")
 주어진 조건에 따라 다르게 동작하도록 하는 문
 if, switch, guard 문이 있다
 
- 
+
 <pre>
 <code>
 
@@ -555,11 +555,11 @@ default:
 
 </code>
 </pre>
- 
 
- 
 
- 
+
+
+
 
 ## 반복문
 
@@ -605,7 +605,7 @@ print(i)
 
 -> 1,2,3,4 차례대로 출력
 
- 
+
  <pre>
  <code>
 
@@ -619,7 +619,7 @@ for i in array {
 
 </code>
 </pre>
- 
+
 
 이렇게 범위 데이터에 배열을 넣을 수 있다
 
@@ -654,7 +654,7 @@ while number < 10 {
 
  
 
- 
+
 <pre>
 <code>
 
@@ -702,7 +702,7 @@ print(x)
 
 (선택적인)
 
- 
+
 var name: String=""
 
 이녀석은 값이 있는 걸까 없는 걸까
@@ -753,7 +753,7 @@ var optionalName: String? = "Jinyong"
 
 이런 경우 에러가 난다. requiredName은 옵셔널이 아닌 String타입이므로 값이 꼭 있어야 하고, optionalName이 옵셔널 타입이므로 이 녀석이 실행되기 전까지 값이 있나 없나를 모르기 때문 
 
- 
+
 따라서 swift는 안전을 위해 이런 경우를 금지한다
 
 이때 발생하는 에러는 optionalName이라는 변수의 옵셔널 포장지를 벗기라는 에러가 뜨는데
@@ -769,12 +769,12 @@ optionalName변수를 출력해 보면 Optional("Jinyong") 처럼 옵셔널 포�
 옵셔널 해제 방법에는 명시적 해제와 묵시적 해제가 있다
 
 <img width="329" alt="image" src="https://user-images.githubusercontent.com/102133961/187139411-72e9c672-426e-4a3a-beed-81449945bbfe.png">
- 
+
 먼저 명시적 해제하는 두가지 방법부터 알아보도록 하자
 
  <pre>
  <code>
- 
+
 import UIKit
 
  
@@ -805,7 +805,7 @@ Optional(3)
 
 이 방법은 상당히 위험하다
 
- 
+
 옵셔널을 강제 해제 하게 되면, 에러가 발생해 프로그램이 종료될 수도 있다.
 
 
@@ -857,7 +857,7 @@ test()
 
 </code>
 </pre>
- 
+
 
 이렇게 하면 추출됨
 
@@ -871,7 +871,7 @@ guard문은 guard문 조건을 만족할 때만 guard문을 통과하고(그래�
 
  <pre>
  <code>
- 
+
 let value: Int? = 6
 
 if value == 6 {
@@ -886,10 +886,10 @@ if value == 6 {
 
  </code>
  </pre>
- 
+
  //출력
- 
- 
+
+
 <pre>
 <code>
 value가 6입니다
@@ -906,14 +906,14 @@ value가 6입니다
 
  <pre>
  <code>
- 
+
 let string = "12"
 
 var stringToInt: Int? = Int(string) //여기서 string 변수가 한글이나 다른 문자일 수도 있어서 이런 경우 nil을 반환하기 때문에 Int(string)의 반환 타입은 옵셔널이다. 
 
 //print(stringToInt + 1)
 
- 
+
 let string = "12"
 
 var stringToInt: Int! = Int(string) 
@@ -922,7 +922,7 @@ print(stringToInt + 1)
 
  </code>
  </pre>
- 
+
 
 이렇게 stringToInt 변수의 타입 뒤에 느낌표를 붙여주게 되면, 묵시적 옵셔널 해제가 일어난다. 타입 뒤에 느낌표가 붙여져 있는 옵셔널 변수는 자동적으로 옵셔널 해제가 일어나 일반값처럼 자유롭게 사용할 수 있다.
 
@@ -952,13 +952,13 @@ struct 구조체 이름 {
 
 }
 
- 
+
 <pre>
 <code>
 
 import UIKit
 
- 
+
 struct User {
 
 var nickname: String
@@ -985,7 +985,7 @@ user.information() // 구조체 함수(메소드)에 접근
 </code>
 </pre>
 
- 
+
 클래스는 클래스 키워드로 정의한다
 
 
@@ -997,7 +997,7 @@ class 클래스 이름 {
 
  <pre>
  <code>
- 
+
 import UIKit
 
  
@@ -1034,7 +1034,7 @@ dog.introduce()
 
  </code>
  </pre>
- 
+
 
 ## 초기화(initialization)
 
@@ -1060,7 +1060,7 @@ init(매개변수: 타입, ...) {
 
 }
 
- 
+
 ex)
 <pre>
 <code>
@@ -1115,10 +1115,10 @@ user2.nickname
 
 user2.age
 
- 
+
  </code>
  </pre>
- 
+
 
 생성자와 반대되는 소멸자(Deinitializer)도 있다
 메모리 정리 및 삭제 기능을 구현할 수 있다
@@ -1199,7 +1199,7 @@ dog2.name = "윤진용" // 에러 발생
 
 </code>
 </pre>
- 
+
 
 이 경우에는 dog2 즉 인스턴스 변수가 상수로 선언되어 있어서
 
@@ -1217,7 +1217,7 @@ dog2.name = "윤진용" // 에러 발생
 
 클래스 인스턴스는 상수로 선언해도 변수로 선언한 프로퍼티 값을 변경할 수 있다.
 
- 
+
 <pre>
 <code>
 
@@ -1261,13 +1261,13 @@ print(cat.name)
 연산 프로퍼티는 열거형에서도 사용할 수 있다.
 
  
- 
- 
+
+
 연산 프로퍼티는 값을 직접적으로 저장하지 않는 대신 getter 와 setter 를 이용해서 값을 직접적으로 접근하고 수정할 수 있다.
 
  <pre>
  <code>
- 
+
 struct Stock {
 
  var averagePrice: Int
@@ -1294,7 +1294,7 @@ struct Stock {
 
 }
 
- 
+
 var stock = Stock(averagePrice: 2300, quantity: 3)
 
 print(stock)
@@ -1307,7 +1307,7 @@ stock.averagePrice -> 1000
 
  </code>
  </pre>
- 
+
 
 참고로 set만 지워서 읽기 전용 프로퍼티로 만들 수 있다
 
@@ -1325,12 +1325,12 @@ stock.averagePrice -> 1000
 
 프로퍼티가 set될 때마다 호출된다고 보면 된다.
 
- 
+
 프로퍼티 옵저버는 세 가지 경우에만 사용할 수 있다
 
 저장 프로퍼티랑 오버라이딩이 된 저장 연산 프로퍼티에서만 사용할 수 있다.
 
- 
+
 <pre>
 <code>
 
@@ -1383,7 +1383,7 @@ newValue와 oldValue가 디폴트 매개변수가 된다.
 
 static 키워드를 사용해서 정의한다.
 
- 
+
 <pre>
 <code>
 
@@ -1451,7 +1451,7 @@ Protocol을 채택해 기능을 설정할 수도 있다.
 
 하지만 구조체는 구조체 변수를 새로운 변수에 할당할 때마다 완전히 새로운 구조체가 할당이 되고(값 타입이라 스택 영역에 직접 값이 저장) 따라서 구조체를 여러 개의 변수에 할당한 뒤 값을 변경시키더라도 다른 변수에 영향을 주지 않는다. (값 자체를 복사해 버리기 때문)
 
- 
+
 <pre>
 <code>
 
@@ -1465,7 +1465,7 @@ class SomeClass {
 
  }
 
- 
+
 struct someStruct {
 
  var count: Int = 0
@@ -1484,14 +1484,14 @@ struct someStruct {
 
  class1.count // class1의 count가 2로 변경된 것을 확인할 수 있다.
 
- 
+
  var struct1 = SomeStruct()
 
  var struct2 = struct1
 
  var struct3 = struct1
 
- 
+
  struct3.count = 3
 
  struct2.count = 4
@@ -1502,7 +1502,7 @@ struct someStruct {
 
  struct3.count  //3
 
- 
+
 </code>
 </pre>
 
@@ -1515,7 +1515,7 @@ struct someStruct {
 
 오버라이딩을 통해 물려받은 각종 메소드를 자신 고유의 내용으로 재정의 할 수 있다.
 
- 
+
 <pre>
 <code>
 
@@ -1628,7 +1628,7 @@ print(car.description)
 
  
 
- 
+
 <pre>
 <code>
 
@@ -1655,13 +1655,13 @@ automatic.currentSpeed = 35.0
 print("AutomaticCar: \(automatic.description)")
 </code>
 </pre>
- 
+
 
 상수 저장 프로퍼티나 readonly 연산 프로퍼티는 옵저버를 추가할 수 없는데
 
 이는 둘 다 값을 설정할 수 없기 때문에 willSet이나 didSet을 사용할 수 없기 때문이다.
 
- 
+
 마지막으로 프로퍼티나 메소드 앞에 final 키워드를 붙이게 되면 그 대상은 상속 후 재정의 할 수 없게 된다.
 
 클래스를 정의할 때도 클래스 키워드 앞에 final를 앞에 붙여주면 상속할 수 없게 된다.
@@ -1676,7 +1676,7 @@ print("AutomaticCar: \(automatic.description)")
 
 스위프트에서는 타입 캐스팅을 is 와 as 라는 연산자를 사용해서 수행한다
 
- 
+
 <pre>
 <code>
 
@@ -1812,7 +1812,7 @@ assert함수는 디버깅 모드에서만 동작하고 주로 디버깅 중 조�
 
 guard문에 주어진 조건문이 거짓일 때 구문이 실행된다.
 
- 
+
 <pre>
 <code>
 
@@ -1832,12 +1832,12 @@ assert(value == 0, "값이 0이 아닙니다") //runtime error 발생
 
  </code>
 </pre>
- 
+
 
 assertion함수는 특정 조건을 검증하고 조건이 만족하지 않으면 메세지와 함께 error를 발생시키는 함수이기 때문에 runtime error가 발생하는 것
 그래서 주로 디버깅 중 조건의 검증을 위해 사용하는 거다
 
- 
+
 guard문은 주로 잘못된 값이 함수에 들어오는 것을 방지하기 위해 사용한다.
 
 guard문은 어디서든지 많이 쓰이기 때문에 확실하게 알고 넘어가야 한다
@@ -1862,7 +1862,7 @@ guard 조건 else {
 
 */
 
- 
+
 <pre>
 <code>
 
@@ -1885,7 +1885,7 @@ guardTest(value: 0)
 
 앞에서 잠깐 언급한 적이 있었듯이 guard문으로 옵셔널 바인딩도 할 수 있다.
 
- 
+
 <pre>
 <code>
 
@@ -1899,13 +1899,13 @@ func guardTest(value: Int?) {
 
  </code>
  </pre>
- 
+
 
 이런 경우에 nil일 때만 else로 나가고
 
 옵셔널 포장지가 정상적으로 벗겨지면  print 된다.
 
- 
+
 <pre>
 <code>
 
@@ -1940,7 +1940,7 @@ protocol 이름 {
 
 
 protocol SomeProtocol {
- 
+
 
 }
 
@@ -2081,7 +2081,7 @@ extension으로 추가할 수 있는 기능
 
 \- 특정 프로토콜을 준수할 수 있도록 기능 첨가
 
- 
+
 <pre>
 <code>
 
@@ -2096,7 +2096,7 @@ extension SomeType {
 
 */
 
- 
+
 extension Int {
 
  var isEven: Bool {
@@ -2132,7 +2132,7 @@ number.isEven // false
 
 또 타입에 정의되어 있는 기존 프로퍼티의 프로퍼티 옵저버를 추가할 수 없다
 
- 
+
 <pre>
 <code>
 extension String {
@@ -2204,7 +2204,7 @@ enum CompassPoint {
 
 그래서 클래스 처럼 스위프트의 이름 규칙에 따라 열거형의 첫문자를 대문자로 시작해야 한다
 
- 
+
 <pre>
 <code>
 
@@ -2218,17 +2218,17 @@ case .north:
 
   print("north")
 
- 
+
 case .south:
 
   print("south")
 
- 
+
 case .east:
 
   print("east")
 
- 
+
 case .west:
 
   print("west")
@@ -2240,7 +2240,7 @@ case .west:
 
 //원시값으로 초기화하기
 
- 
+
 <pre>
 <code>
 
@@ -2282,7 +2282,7 @@ case .west:
 
 let direction2 = CompassPoint(rawValue: "남")
 
- 
+
 // 연관값 설정하기
 
 enum phoneError {
@@ -2293,7 +2293,7 @@ enum phoneError {
 
 }
 
- 
+
 let error = PhoneError.batteryLow("배터리가 곧 방전됩니다.")
 
 //batteryLow("배터리가 곧 방전됩니다") 출력
@@ -2319,7 +2319,7 @@ switch error {
 
  }
 
- 
+
 </code>
 </pre>
 
@@ -2327,7 +2327,7 @@ switch error {
 
 옵셔널 체이닝은 옵셔널에 속해있는 nil일지도 모르는 프로퍼티, 메소드, subscription 등을 가져오거나 호출할 때 사용하는 일련의 과정을 뜻한다.
 
- 
+
 <pre>
 <code>
 
@@ -2362,7 +2362,7 @@ print(company.developer!.name) // 옵셔널 체이닝 느낌표로 접근한 옵
 
  </code>
  </pre>
- 
+
 
 ## try~catch
 
@@ -2374,7 +2374,7 @@ swift에서의 에러 처리 방식
 
 스위프트의 열거형은 이런 면에서 해당 오류를 나누고 이에 대한 응답을 나누는 데 굉장히 적합한 구문이다
 
- 
+
 <pre>
 <code>
 
@@ -2510,7 +2510,7 @@ unnamed closure 와 named closure(함수) 둘 다 사실 클로저이지만, 보
 
 이 둘은 in이라는 키워드에 의해 나누어 진다.
 
- 
+
 <pre>
 <code>
 
@@ -2523,16 +2523,16 @@ let hello = { () -> () in //파라미터와 리턴 타입 둘 다 없는 경우
 
 }
 
- 
+
 hello()
 
 </code>
 </pre>
- 
+
 
 클로저의 실행 구문에서 정의한 hello 가 출력된다!
 
- 
+
 <pre>
 <code>
 
@@ -2574,12 +2574,12 @@ doSomething(closure: { () -> () in
 
  })
 
- 
+
  </code>
  </pre>
+
  
- 
- 
+
  <pre>
  <code>
 
@@ -2601,9 +2601,9 @@ doSomething2()()
 
  </code>
  </pre>
- 
 
- 
+
+
  <pre>
  <code>
 
@@ -2643,7 +2643,7 @@ print("hello2")
 
 }
 
- 
+
 </code>
 </pre>
 
@@ -2651,7 +2651,7 @@ print("hello2")
 
 매개변수에 클로저가 여러 개 있는 경우 다중 후행 클로저 구문을 사용한다
 
- 
+
  <pre>
  <code>
 
@@ -2677,7 +2677,7 @@ doSomething2 {
 </pre>
 
 
- 
+
 
 문법을 최소화 하여 클로저를 단순하게 표현하기
 <img width="296" alt="image" src="https://user-images.githubusercontent.com/102133961/187143756-7e24184f-c2ba-4484-8150-8e41764a2a5c.png">
@@ -2705,7 +2705,7 @@ doSomething2 {
 
  <pre>
  <code>
- 
+
 import Foundation
 
  
@@ -2727,7 +2727,7 @@ print("map \(mapArray)")
 -> [0,2,4,6]
 </code>
 </pre>
- 
+
  <pre>
  <code>
  
