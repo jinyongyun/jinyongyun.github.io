@@ -31,10 +31,12 @@ var 변수명:데이터 타입 = 값
 
 
 <pre>
-</code>
+<code>
+
 import Foundation
 let a: Int = 100
 var b: Int = 200
+
 </code>
 </pre>
 
@@ -64,6 +66,8 @@ var b: Int = 200
 
 
 ex)
+
+
 <pre>
 <code>
 var someCharacter : Character = "가"
@@ -77,15 +81,12 @@ var someCharacter : Character = "가"
 
 
 
-###### 스위프트는 타입 추론을 할 수 있다
+## 스위프트는 타입 추론을 할 수 있다
 
  : 따라서 변수나 상수명 뒤에 특정 타입을 명시하지 않아도 컴파일러가 알아서 타입을 추론하여 타입을 결정해준다.
 
 var number = 10
 그냥 이렇게 써줘도 'Int형 타입이구나' 라고 추론한다
-
- 
-
 
 ## 컬렉션 타입
 
@@ -93,17 +94,17 @@ var number = 10
 
 스위프트의 컬렉션 타입에는 크게 Array, Dictionary, Set가 있다.
 
-### Array 
+Array 
 
 데이터 타입의 값들을 순서대로 지정하는 리스트
 
 우리가 흔히 아는 배열이다
 
-### Dictionary 
+Dictionary 
 
 키와 값의 쌍으로 데이터를 저장하는 컬렉션 타입
 
-### Set 
+Set 
 
 같은 데이터 타입의 값을 순서 없이 저장하는 리스트
 
@@ -112,14 +113,10 @@ var number = 10
 그냥 집합이라고 생각하자
 자바와 자료구조 시간에 배운 것이기에 세부적인 사항은 넘어간다
 
-
 <pre>
 <code>
 
 import UIKit
-
- 
-
 var numbers: Array<Int> = Array<Int>()
 
 numbers.append(1)
@@ -127,8 +124,6 @@ numbers.append(1)
 numbers.append(3)
 
 numbers.append(2)
-
- 
 
 numbers[0]
 
@@ -145,18 +140,13 @@ numbers
  </code>
  </pre>
 
- // index 2번에 4를 집어넣음 
-
  
-
 <pre>
 <code>
 
 var names = [String]()
 
 var names: [String] = []
-
-
 
 var dic: [String: Int] = ["윤진용": 1]
 
@@ -166,42 +156,30 @@ dic["김지"] = 5
 
 dic
 
- 
-
 dic.removeValue(forKey: "김민지")
 
  </code>
  </pre>
 
- //var dic: Dictionary<String, Int> = Dictionary<String, Int>()
+//var dic: Dictionary<String, Int> = Dictionary<String, Int>()
 
-
+//var dic: Dictionary<String, Int> = Dictionary<String, Int>()
 
 
 <pre>
 <code>
-
 var set: Set = Set<Int>()
-
 set.insert(10)
-
 set.insert(20)
-
 set.insert(30)
-
 set.insert(30)
-
 set.insert(30)
-
 set.remove(20)
-
 </code>
 </pre>
 
 
 //set는 축약형 형태가 따로 없다!
-
-
 
 ## 함수
 
@@ -213,7 +191,6 @@ func 함수명(파라미터 이름: 데이터 타입)->반환타입 {
 return 반환값
 
 }
-
 
 
 
@@ -236,9 +213,11 @@ return "hello"
 
 hello()
 
-
 </code>
 </pre>
+
+
+
 
 <pre>
 <code>
@@ -341,7 +320,7 @@ func sendMessage(me: String, friends: String. . .) -> String {
 sendMessage(me: "Jinyong", friends: "Jonson", "aiensert", "serius")
 
 </code>
- </pre>
+</pre>
 
 가변 매개변수로 선언되어 있으면 배열을 받을 수 있다고 생각하면 쉽다
 
