@@ -1,0 +1,674 @@
+---
+layout: single
+title:  "[UMC] 5주차 : Open Source"
+categories: UMC
+tag: [UMC, project]
+toc: true
+author_profile: false
+sidebar:
+nav: "docs"
+search: true
+---
+## ios 5주차 워크북 (Open Source)
+
+[standard mission+challenge mission](https://www.notion.so/standard-mission-challenge-mission-24daae2911164c96837bfeb5f77068df)
+
+## 📝 학습 목표
+
+---
+
+1. Open Source를 이해하고 필요한 경우 찾아 쓸 수 있다.
+2. CocoaPods을 통해 외부 라이브러리를 설치하여 적용할 수 있다.
+
+## ✍🏻 수업 내용 정리
+
+---
+
+- 세미나를 들으며 들으며 느낀 점, 배운 점들을 정리해보세요! -
+
+
+
+이렇게 아래로 내렸을 때, 업데이트 되는 화면을 구현하는 실습을 진행하며 오픈소스에 대해 알아보도록 하자.( 이 기능 자체는 UIScrollView 자체에 내장되어있는 기능이다. 즉 스크롤뷰를 다룰 줄 알아야 한다)
+
+## 오픈소스
+
+오픈소스는 소스 코드를 공개해 누구나 특별한 제한 없이 그 코드를 보고 사용할 수 있는 오픈 소스 라이선스를 만족하는 소프트웨어
+
+즉 소스가 오픈되어 있는 소프트웨어, 누군가에게 허락을 받지 않고 사용할 수 있는 소프트웨어(또는 소스)
+
+(얘시: 구글링 했을 때 나오는 코드들, 스위프트 언어 자체도 오픈소스)
+
+오픈소스를 통해 개발 문화를 파악할 수도 있고, 이 오픈소스를 통해 많은 개발 시스템이 비약적으로 발전했다. 그래서 오픈소스는 매우 중요하다.
+
+특징: 재배포와 개조를 가능하게 해서 소프트웨어가 향상되고, 여러 사람들이 고치고 쓰면서 버그를 개선할 수 있다 즉 집단지성의 힘
+
+### 구글링 팁
+
+보통 영어로 검색 추천: 전세계 공통 언어가 영어인 만큼, 국내에 있는 개발자보다 전 세계에 있는 개발자들의 정보를 모두 보는 것이 훨씬 많은 자료가 나오기에
+
+How to 로 시작하는 질문글 검색
+
+최신 자료를 보려면 도구 누르고 기간 설정하기
+
+나온 결과를 공식문서를 참고하여 공통적으로 언습된 키워드를 이용한다
+
+Stack Overflow 커뮤니티 활용하기
+
+**let** refreshControl = UIRefreshControl()
+
+**override** **func** viewDidLoad() {
+
+**super**.viewDidLoad()
+
+kakaoTalkTableView.delegate = **self**
+
+kakaoTalkTableView.dataSource = **self**
+
+initRefreshControl()
+
+}
+
+**func** initRefreshControl(){
+
+kakaoTalkTableView.refreshControl = refreshControl
+
+refreshControl.addTarget(**<#T##target: Any?##Any?#>**, action: **<#T##Selector#>**, for: **<#T##UIControl.Event#>**)
+
+}
+
+addTarget 알아보기
+
+![스크린샷 2022-10-27 오후 7.14.59.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b6ba189f-f001-42a2-a4b7-87f1a2846656/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-10-27_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7.14.59.png)
+
+오픈소스가 가장 크게 활용될 수 있는게 외부 라이브러리
+
+외부 라이브러리 같은 경우에는 아까 말했듯이 많은 사람들이 공유하고 재생산할 수 있다.
+
+라이브러리를 어떻게 활용하냐
+
+cocoapod을 이용
+
+cocoapod은 오픈소스 즉 라이브러리를 자동으로 내 앱에 적용하도록 해준다
+
+![스크린샷 2022-10-27 오후 7.37.49.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2dcb2a87-9d34-4b6d-949b-60ef58bc4347/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-10-27_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7.37.49.png)
+
+cocoapod 깐 다음,
+
+pod init으로 내 플젝 내에 pod file 추가
+
+pod file에 접근해 필요한 라이브러리 넣고
+
+pod install로 해당 라이브러리 적용
+
+내 플젝 내에 import하여 사용하면 ㄲㅡㅌ
+
+lottie란
+
+다양한 라이브러리를 이용해 베이스 디자인과 기능을 추가해주는 사이트
+
+이미 회원가입이 되어있어 깜짝놀랐다
+
+(도대체 언제 가입했던거지…)
+
+이번주는 주로 실습 위주로 진행되어 실습 사진을 첨부한다
+
+![스크린샷 2022-10-27 오후 7.37.49.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f9275f4b-cfa6-4cff-a611-68c6608a559e/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-10-27_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7.37.49.png)
+
+![스크린샷 2022-10-27 오후 7.30.45.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/476e3aea-a08f-4735-b540-94541bb5fc77/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-10-27_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7.30.45.png)
+
+![스크린샷 2022-10-28 오전 12.09.49.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4719611a-c055-4b34-bde9-9b9f401b3791/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-10-28_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_12.09.49.png)
+
+## 🎯 핵심 키워드
+
+---
+
+<aside>
+💡 중요한 개념들에 대해 조사해서 정리해주세요!
+레퍼런스를 참고하여 개념의 정의, 속성, 장단점 등을 적어주셔도 됩니다.
+조사는 공식 홈페이지 **Best**, 블로그(최신 날짜) **Not Bad**
+
+</aside>
+
+- indicator bar
+    
+    # **statusBar**
+    
+    The status bar that displays the status item.
+    
+    macOS 10.0+
+    
+    ## **Declaration**
+    
+    `weak var statusBar: [NSStatusBar](https://developer.apple.com/documentation/appkit/nsstatusbar)? { get }`
+    
+    ## **See Also**
+    
+    ****Related Documentation****
+    
+    [Status Bar Programming Topics](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/StatusBar/StatusBar.html#//apple_ref/doc/uid/10000073i)
+    
+- 오픈 소스 소프트웨어
+    
+    오픈소스란 원래 오픈소스 소프트웨어(Open Source Software, OSS)를 뜻하는 용어입니다. 오픈소스 소프트웨어는 공개적으로 액세스할 수 있게 설계되어 누구나 자유롭게 확인, 수정, 배포할 수 있는 코드입니다.
+    
+    오픈소스 소프트웨어는 동료 평가(peer review) 와 커뮤니티 기반 프로덕션에 의지하므로, 분산된 동시에 협업 방식으로 개발됩니다. 단일 작성자 또는 기업이 아닌 커뮤니티가 개발하므로 독점적 소프트웨어보다 저렴하고, 유연하며, 지속성이 있습니다.
+    
+    오픈소스는 단순한 소프트웨어 프로덕션을 넘어서는 작업 방식이자 하나의 흐름이 되었습니다. 이러한 흐름은 오픈소스 소프트웨어의 가치와 분산된 프로덕션 모델을 활용하여 커뮤니티와 업계가 당면한 문제를 해결할 새로운 방법을 찾습니다.
+    
+    출처) Red Hat [https://www.redhat.com/ko/topics/open-source/what-is-open-source](https://www.redhat.com/ko/topics/open-source/what-is-open-source)
+    
+- UIRefreshControl
+    
+    # **UIRefreshControl**
+    
+    A standard control that can initiate the refreshing of a scroll view’s contents.
+    
+    iOS 6.0+iPadOS 6.0+Mac Catalyst 13.1+
+    
+    ## **Declaration**
+    
+    `@MainActor class UIRefreshControl : [UIControl](https://developer.apple.com/documentation/uikit/uicontrol)`
+    
+    ## **Overview**
+    
+    A `UIRefreshControl` object is a standard control that you attach to any `[UIScrollView](https://developer.apple.com/documentation/uikit/uiscrollview)` object, including table views and collection views. Add this control to scrollable views to give your users a standard way to refresh their contents. When the user drags the top of the scrollable content area downward, the scroll view reveals the refresh control, begins animating its progress indicator, and notifies your app. You use that notification to update your content and dismiss the refresh control.
+    
+    ![https://docs-assets.developer.apple.com/published/5a3ee44a30/refresh-control@2x.png](https://docs-assets.developer.apple.com/published/5a3ee44a30/refresh-control@2x.png)
+    
+    The refresh control lets you know when to update your content using the target-action mechanism of `[UIControl](https://developer.apple.com/documentation/uikit/uicontrol)`. Upon activation, the refresh control calls the action method you provided at configuration time. When adding your action method, configure it to listen for the `[valueChanged](https://developer.apple.com/documentation/uikit/uicontrol/event/1618238-valuechanged)` event, as shown in the following example code. Use your action method to update your content, and call the refresh control’s `[endRefreshing()](https://developer.apple.com/documentation/uikit/uirefreshcontrol/1624848-endrefreshing)` method when you’re done.
+    
+    `func configureRefreshControl () {   // Add the refresh control to your UIScrollView object.   myScrollingView.refreshControl = UIRefreshControl()   myScrollingView.refreshControl?.addTarget(self, action:                                      #selector(handleRefreshControl),                                      for: .valueChanged)}    @objc func handleRefreshControl() {   // Update your content…
+       // Dismiss the refresh control.   DispatchQueue.main.async {      self.myScrollingView.refreshControl?.endRefreshing()   }}`
+    
+    If you’re using a `[UITableViewController](https://developer.apple.com/documentation/uikit/uitableviewcontroller)`, assign its `[refreshControl](https://developer.apple.com/documentation/uikit/uitableviewcontroller/1614752-refreshcontrol)` property to an instance of `UIRefreshControl`. Then associate a target and action method for the `[valueChanged](https://developer.apple.com/documentation/uikit/uicontrol/event/1618238-valuechanged)` event to manage the refresh behavior of the associated table view.
+    
+    **Important**
+    `UIRefreshControl` isn’t available when the user interface idiom is `[UIUserInterfaceIdiom.mac](https://developer.apple.com/documentation/uikit/uiuserinterfaceidiom/mac)`. However, you can update your app to provide similar functionality in the Mac idiom. For example, replace the control with a Refresh menu item by creating a `[UIKeyCommand](https://developer.apple.com/documentation/uikit/uikeycommand)` object with the title “Refresh” and the keyboard shortcut Command-R. Then add the command to your app’s menu system. For more information, see [Adding Menus and Shortcuts to the Menu Bar and User Interface](https://developer.apple.com/documentation/uikit/uicommand/adding_menus_and_shortcuts_to_the_menu_bar_and_user_interface).
+    
+    ## **Topics**
+    
+    ****Initializing a refresh control****
+    
+    `[init()](https://developer.apple.com/documentation/uikit/uirefreshcontrol/1624846-init)`
+    
+    Initializes and returns a standard refresh control.
+    
+    ****Accessing the control attributes****
+    
+    `[var tintColor: UIColor!](https://developer.apple.com/documentation/uikit/uirefreshcontrol/1624847-tintcolor)`
+    
+    The tint color for the refresh control.
+    
+    `[var attributedTitle: NSAttributedString?](https://developer.apple.com/documentation/uikit/uirefreshcontrol/1624845-attributedtitle)`
+    
+    The styled title text to display in the refresh control.
+    
+    ****Managing the refresh status****
+    
+    `[func beginRefreshing()](https://developer.apple.com/documentation/uikit/uirefreshcontrol/1624842-beginrefreshing)`
+    
+    Tells the control that a refresh operation was started programmatically.
+    
+    `[func endRefreshing()](https://developer.apple.com/documentation/uikit/uirefreshcontrol/1624848-endrefreshing)`
+    
+    Tells the control that a refresh operation has ended.
+    
+    `[var isRefreshing: Bool](https://developer.apple.com/documentation/uikit/uirefreshcontrol/1624844-isrefreshing)`
+    
+    A Boolean value indicating whether a refresh operation has been triggered and is in progress.
+    
+    ## **Relationships**
+    
+    ****Inherits From****
+    
+    - `[UIControl](https://developer.apple.com/documentation/uikit/uicontrol)`
+- addTarget
+    
+    addTarget은 UIControl 클래스 안에 있는 인스턴스 메서드이다. 주로 UIButton, UITextField와 같이 사용자가 직접 Control을 할 수 있는 객체에 접근하여 특정 이벤트가 발생할 때 마다 내가 작성한 메서드를 동작하도록 만들 수 있는 아주 유용한 메서드이다. 
+    
+    ## target
+    
+    내가 설정한 action 메서드가 호출되는 객체를 설정하는 파라미터다. 즉, action파라미터에 설정한 메서드가 호출되는 개체라고 생각하면 된다. addTarget을 정의하면 UIControl를 갖고 있는 상위 View를 특정하기 때문에, 보통의 경우는 self로 둔다.
+    
+    ## action
+    
+    #selector()를 이용하여 ControlEvents의 설정한 이벤트가 발생할 때마다 동작하는 메서드를 선택해주어야 하는 파라미터이다.
+    
+    ## controlEvents
+    
+    어떤 이벤트가 발생할 때 마다 선택한 메서드를 실행시킬 것인지 지정해주는 파라미터다. 이 파라미터는 UIControl.Event라는 상수 목록들을 지정하고 있다.
+    
+    - valueChanged
+    
+    값이 바뀔 때 마다 동작
+    
+    - touchUpInside
+    
+    터치할 때마다 동작
+    
+    # **addTarget(_:action:for:)**
+    
+    AppIntentsUIKitiOS 16.0+iPadOS 16.0+macOS 13.0+Mac Catalyst 16.0+tvOS 16.0+watchOS 9.0+
+    
+    ## **Declaration**
+    
+    `override final func addTarget(
+        _ target: Any?,
+        action: [Selector](https://developer.apple.com/documentation/objectivec/selector),
+        for controlEvents: [UIControl](https://developer.apple.com/documentation/uikit/uicontrol).[Event](https://developer.apple.com/documentation/uikit/uicontrol/event)
+    )`
+    
+    출처)
+    
+    [https://velog.io/@wannabe_eung/UiKit-UIControl과-특정-Action을-연결하는-addTarget을-알아보자](https://velog.io/@wannabe_eung/UiKit-UIControl%EA%B3%BC-%ED%8A%B9%EC%A0%95-Action%EC%9D%84-%EC%97%B0%EA%B2%B0%ED%95%98%EB%8A%94-addTarget%EC%9D%84-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90)
+    
+- DispatchQueue
+    
+    DispatchQueue에 대해 알기 위해선, GCD에 대해 파악해야 한다. 우리는 흔히 GCD와 DispatchQueue를 갖은 것으로 보지만 실상 DispatchQueue에서 GCD 개념을 이용하는 것이다.
+    
+
+      공식문서에서 정의한 GCD는 다음과 같다
+
+Dispatch, also known as Grand Central Dispatch (GCD), contains language features, runtime libraries, and system enhancements that provide systemic, comprehensive improvements to the support for concurrent code execution on multicore hardware in macOS, iOS, watchOS, and tvOS.
+
+# GCD
+
+GCD는 다중 코어 시스템에서 프로그램이나 스레드를 동시에 실행할 수 있도록 하는 프로그래밍 언어 요소, 런타임 라이브러리 등이라고 한다. 정리하자면 GCD와 dispatch Queue는 같은 것이 아니라 GCD의 개념으로 동시에 스레드를 사용할 수 있도록 지원하는 스위프트의 API가 dispatch queue인 것이다.
+
+2학년 1학기에 배운 자바를 생각해보면, 스레드를 생성하기 위해서 명시적으로 스레드를 선언하고 작업도 특정한 스레드에 지정해줘야 했다.
+
+딱 봐도 귀찮고, 개발자의 책임이 늘어나는 구조이다.
+
+여기에서 멀티스레딩 환경을 만드는 것은 훨씬 더 귀찮은 일이라는 것이 딱 봐도 보인다.
+
+하지만 Dispatch Queue를 사용하면 개발자가 할 일은 하나로 줄어든다. 작업을 정의해서 Dispatch Queue에 넣어주는 일이다. 그러면 OS에서 Dispatch Queue에 있는 작업들을 적절한 스레드에 할당해준다.
+
+이 때문에 개발자가 자신이 등록한 작업들이 어떤 스레드에서 실행된다는 것을 파악하지 못하지만….
+
+```swift
+DispatchQueue.{큐 종류}){qos 옵션}).{sync/async} {
+
+}
+```
+
+DispatchQueue는 기본적으로 위처럼 사용할 수 있다. 개발자는 큐의 종류, qos 우선순위, sync, async를 설정해서 이 블록에 넣은 task를 DispatchQueue를 통해 현재 스레드, 혹은 다른 스레드에서 실행될 수 있게 한다.
+
+### DispatchQueue는 두 가지 특성을 가질 수 있는데
+
+Serial: 큐에 등록된 작업을 한 번에 하나씩 처리
+
+결과는 항상 넣어준 순서대로
+
+왜냐하면 Dispatch Queue가 애초에 Serial 일련의 큐로 만들어졌기에 먼저 들어온 작업이 완료되어야 다음 작업을 시작해서
+
+이렇게 실행 순서가 항상 순서대로인 serial과 달리
+
+Concurrent: 여러작업이 동시에 실행
+
+OS는 DispatchQueue에서 막 꺼낸 따끈따근한 현재 작업이 끝나기도 전에 다음 작업을 다른 스레드에 할당해 동시에 여러 작업을 처리한다
+
+이러면 매번 다른 작업 순서가 나오는데, 각 스레드에서 작업이 끝나는 대로 다음 작업을 불러서 처리하기 때문이다.
+
+## DispatchQueue를 사용할 때, 우리는 세 종류의 큐를 선택하여 사용할 수 있다.
+
+MainQueue, GlobalQueue, CustomQueue
+
+MainQueue: 메인 스레드에서 작업을 보관하고 수행하는 큐
+
+메인 스레드는 딱 하나이기 때문에, 메인 큐도 단 하나만 존재하고 Serial(일련)의 특성을 갖고 있다.
+
+즉 큐에 들어온 작업을 순차적으로 실행한다. 참고로 메인 스레드는 앱과 함께 생성되면서 매우 중요한 임무를 부여받는데, 바로 UI의 업데이트라는 굉장히 중요하고도 중요한 임무가 그 주인공이다.
+
+우리가 보는 아이폰의 앱 요소들은 모두 메인 스레드에서 그리고 있다. 따라서 UI업데이트과 관련된 모든 작업은 다른 큐가 아닌 이 Main queue에 할당되어야 한다.
+
+```swift
+var serial = [0,1,2,3,4]
+
+(0..<5).forEach({ index in
+   DispatchQueue.main.async {
+        print(serial[index])
+    }
+})
+```
+
+메인큐는 serial하기에 01234가 언제나 출력된다
+
+GlobalQueue:글로벌큐는 메인 스레드가 아닌 다른 스레드에서 작업을 처리한다. 동시에 concurrent 특성을 갖기에 여러 스레드로 작업이 분산되어 동시에 처리된다.
+
+```swift
+var serial = [0,1,2,3,4]
+(0..<5).forEach({index in
+    DispatchQueue.global.async {
+    print(numbers[index])
+    }
+})
+```
+
+항상 다른 결과가 나오는 것을 볼 수 있다.
+
+CustomQueue:
+
+커스텀 큐는 사용자가 어떤 특성의 큐로 DispatchQueue를 생성할지 결정할 수 있도록 해준다.
+
+기본값으로는 Serial을 갖고 있지만, 생성시에 attributes 인자를 통해 concurrent로 변경하는 것이 가능하다.
+
+```swift
+var serial = [0,1,2,3,4]
+let dispatchQueue = DispatchQueue(label:"custom")
+(0..<5).forEach({ index in
+    DispatchQueue.global().async {
+    print(numbers[index[)
+     }
+ }) // 기본적인 Serial특성의 큐
+
+let dispatchQueue = DispatchQueue(label: "custom", attributes: .concurrent)
+//이걸 대입하면 
+(0..<5).forEach({ index in
+    DispatchQueue.global().async {
+    print(numbers[index[)
+     }
+ })//concurrent 특성을 가짐
+```
+
+### QOS
+
+DispatchQueue에는 적용할 수 있는 옵션이 하나 더 있는데(대체 어디까지 가는거냐 DispatchQueue)
+
+바로 아까부터 궁금했던 qos가 바로 그 주인공이다
+qos는 quality of service의 준말로, Concurrent하게 작업이 분산되어 실행되고 있을 때, 작업의 중요도를 설정해 실행의 우선순위를 부여하는 것이다. 우선순위가 더 높은 큐는 더 많은 스레드에 작업을 분산하여 빠르게 처리하고, 우선순위가 낮은 큐는 상대적으로 적은 스레드에 작업을 분산시켜 보다 느리게 수행한다.
+
+qos의 종류는 총 5가지가 있다.
+
+1. **userInteractive**: 우선순위 가장 높다. 사용자와 직접 상호작용을 하는 작업을 의미하기 때문에 사용자의 요청에 곧바로 응답이 있어야한다. 애니메이션 처리, 이벤트 처리, UI 업데이트 등의 경우이다. 딱 봐도 늦으면 사용자분이 화내실 것 같다.
+2. **userInitiated**: 사용자가 어떤 요청을 했을 때 그 결과를 곧바로 받아야하거나 사용자가 앱을 사용하는 것을 순간적으로 막기 위한 경우(막기 위한 이라고 하니까 조금 이상한데…기다리게 하는 경우?)이다. 예를 들면 사용자에게 보여줄 이메일 내용을 로드할 때
+3. **default**: 기본값으로 일반적인 작업의 경우.
+4. **utility**: 사용자가 앱을 계속 사용하지 않도록 막지 않는 작업에 사용할 수 있습니다. 예를 들면 이 qos는 사용자와 상호작용하지 않으면서 오랜시간동안 어떤 작업을 진행해야할 때 사용할 수 있다.
+5. **background**: 가장 낮은 우선순위를 가지는 qos이고, 앱이 백그라운드에서 실행중일 때 진행하는 작업에 이 qos를 사용할 수 있다.
+
+### 마지막에 마지막으로 마지막 특성인 Sync와 Async….
+
+논리회로 시간에 배운 그 동기와 비동기가 맞다.
+
+sync는 큐에 작업을 등록한 이후에 해당 작업이 완료될때까지 더 이상 코드를 진행하지 않고 기다리는 것을 의미하고, Async는 큐에 작업을 등록하면 작업의 완료여부와 상관없이 계속 코드를 실행하는 것을 의미한다.
+
+sync와 Async는 DispatchQueue에 작업을 등록하는 주체에 대한 설정이므로 concurrent, serial 특성과 헷갈리지 말도록 하자.
+
+예시)
+
+### sync+Serial
+
+sync와 serial을 함께 사용하는 경우.
+
+Sync로 설정했으니 코드가 실행될 때 SerialDispatchQueue에 작업을 하나 등록하면 해당 작업이 끝날 때까지 기다릴 것이다. 그리고 DispatchQueue 쪽에서는 메인 스레드로 작업을 보내 처리하도록 할 것이다.
+
+```swift
+var serial = [0,1,2,3,4]
+let dispatchQueue = DispatchQueue(label: "custom")
+(0..<5).forEach({ index in
+   dispatchQueue.sync {
+       print(nubmers[index])
+   }
+  })
+
+```
+
+큐에는 한 번에 하나의 작업만 들어가고, 이 작업은 항상 메인 스러드에서 실행이 될 것이다.
+
+print(serial[0]) → Serial DispatchQueue에 등록 → 스레드에서 실행
+
+위 코드에선 CustomQueue를 직접 만들어서 사용했는데, Serial 특성을 갖는 MainDispatchQueue를 사용하면 어떻게 될까?
+
+```swift
+var serial = [0,1,2,3,4]
+(0..<5).forEach({ index in
+    DispatchQueue.main.sync { //에러발생!!!!
+        print(numbers[index])
+     }
+})
+```
+
+에…에러가 나고 만다.
+
+그 이유는 Serial Queue와 메인 스레드에 있는데
+
+Main DispatchQueue에서 sync를 호출하면 메인 스레드는 그대로 진행을 멈추고 등록한 작업이 끝날때까지 기다린다. 그리고 동시에 큐에 등록된 작업은 메인 스레드로 할당된다.하지만 메인 스레드는 이미 아무것도 못하쥬가 아니라 아무것도 못하는 상태이기에 작업을 수행할 수 없다.이 때문에 큐에 등록된 작업은 시작되지 못하고, 영원히 실행되지도 작업이 끝나지도 않는 도르마무 상태에 놓이게 된다.
+
+한 가지 더 조심해야 할 점!
+
+```swift
+var serial = [0,1,2,3,4]
+(0..<5).forEach({index in
+     DispatchQueue.global().async {
+       DispatchQueue.global().sync {
+            print(serial[index])
+        }
+     }
+})
+```
+
+항상 그렇지는 않지만, 같은 큐에서 작업을 넣고, 해당 작업을 다시 같은 큐에 sync로 넣으면 같은 스레드에 다시 한 번 작업을 할당할 수도 있다. 외부 DispatchQueue가 스레드1에서 DispatchQueue를 실행하는 작업을 등록했을 때. 해당 스레드1에서 sync로 print(serial[index])를 큐에 넣고, OS가 넣어진 출력 작업을 다시 스레드1에 할당하면 sync된 스레드 1은 아무 동작도 하지 못한다.
+
+### Serial+Async
+
+작업 완료 여부와 상관없이 계속 진행되고, 작업의 수행은 순차적으로 진행된다.
+
+```swift
+var serial = [0,1,2,3,4]
+let dispatchQueue = DispatchQueue(label: "custom")
+(0..<5).forEach({ index in
+     dispatchQueue.async {
+        print(serial[index])
+      }
+})
+```
+
+print(serial[0])
+
+print(serial[1])
+
+print(serial[2]) → Serial DispatchQueue →스레드
+
+print(serial[3])
+
+print(serial[4])
+
+모든 작업들이 작업의 결과와 상관없이 큐에 등록되고, 작업은 큐에서 하나씩 꺼내서 메인 스레드에서 처리하게 된다. 이 경우 작업들의 등록순서와 출력순서가 일치한다.
+
+### Concurrent+Sync
+
+```swift
+var serial = [0,1,2,3,4]
+(0..<5).forEach({ index in
+   DispatchQueue.global().sync {
+        print(serial[index])
+    }
+ })
+```
+
+작업이 끝날 때까지 대기하면서, 하나의 작업이 여러 스레드에 분산되어 처리된다.
+
+### Concurrent+Async
+
+```swift
+var serial = [0,1,2,3,4]
+(0..<5).forEach({ index in
+   DispatchQueue.global().async {
+      print(serial[index])
+    }
+})
+```
+
+작업을 완료 여부와 상관없이 계속 진행하고 ,등록된 작업들은 스레드에 분산되어서 동시에 실행된다.
+
+- CocoaPods
+    
+    CocoaPods is a dependency manager for Swift and Objective-C Cocoa projects. It has over 92 thousand libraries and is used in over 3 million apps. CocoaPods can help you scale your projects elegantly.
+    
+- addSubview
+    
+    # **addSubview(_:)**
+    
+    Adds a view to the end of the receiver’s list of subviews.
+    
+    iOS 2.0+iPadOS 2.0+Mac Catalyst 13.0+tvOS 9.0+
+    
+    ## **Declaration**
+    
+    `func addSubview(_ view: [UIView](https://developer.apple.com/documentation/uikit/uiview))`
+    
+    ****Parameters`view`**The view to be added. After being added, this view appears on top of any other subviews.
+    
+    ## **Discussion**
+    
+    This method establishes a strong reference to `view` and sets its next responder to the receiver, which is its new superview.
+    
+    Views can have only one superview. If `view` already has a superview and that view is not the receiver, this method removes the previous superview before making the receiver its new superview.
+    
+
+## 📢 5주차 수업 후기
+
+---
+
+API와 라이브러리를 이용하는 도입부를 드디어 지나치게 되었다.
+
+앞으로 활용하게 될 수많은 라이브러리와 API들이 너무 기대된다.
+
+## ⚠️ 스터디간 주의사항
+
+---
+
+1. **과제 피드백 기반 진행입니다** - 한명씩 본인의 **과제를 발표**하는 시간 그리고 해온 **과제에 대한 피드백**을 하는 시간 (ex:전 이렇게 생각해서 이런 부분 다르게 해왔는데 저것도 괜찮은 것 같아요!)이 **무조건 기반**이 되어야 합니다!
+2. 부가적으로 **워크북에서 제공되는 키워드 혹은 강의에서 들은 디테일적인 부분**에서 더 토의해봐도 좋을 것 같습니다.
+
+## ✅ 실습 체크리스트
+
+---
+
+- [x]  구글링을 통해 indicator bar 추가하는 방법을 찾았나요?
+
+# **statusBar**
+
+The level for a status window.
+
+iOS 2.0+iPadOS 2.0+Mac Catalyst 13.0+
+
+## **Declaration**
+
+`static let statusBar: [UIWindow](https://developer.apple.com/documentation/uikit/uiwindow).[Level](https://developer.apple.com/documentation/uikit/uiwindow/level)`
+
+## **Discussion**
+
+Windows at this level appear on top of your app's main window, but below alerts.
+
+## **See Also**
+
+****Window levels****
+
+`[static let normal: UIWindow.Level](https://developer.apple.com/documentation/uikit/uiwindow/level/1621595-normal)`
+
+The default level.
+
+`[static let alert: UIWindow.Level](https://developer.apple.com/documentation/uikit/uiwindow/level/1621624-alert)`
+
+The level for an alert view.
+
+- [x]  공식 문서를 참고하여 코드를 이해했나요?
+
+**Class
+UISwipeActionsConfiguration**
+
+The set of actions to perform when swiping on rows of a table.
+
+iOS 11.0+iPadOS 11.0+Mac Catalyst 13.1+
+
+## **Declaration**
+
+`@MainActor class UISwipeActionsConfiguration : [NSObject](https://developer.apple.com/documentation/objectivec/nsobject)`
+
+## **Overview**
+
+Create a `UISwipeActionsConfiguration` object to associate custom swipe actions with a row of your table view. Users swipe horizontally left or right in a table view to reveal the actions associated with a row. Each swipe-actions object contains the set of actions to display for each type of swipe.
+
+To add custom actions to your table view’s rows, implement the `[tableView(_:leadingSwipeActionsConfigurationForRowAt:)](https://developer.apple.com/documentation/uikit/uitableviewdelegate/2902366-tableview)` or `[tableView(_:trailingSwipeActionsConfigurationForRowAt:)](https://developer.apple.com/documentation/uikit/uitableviewdelegate/2902367-tableview)` method of your table view’s delegate. In those methods, create and return the actions for the indicated row. The table displays your action buttons and executes the appropriate handler block when the user taps one of them.
+
+## **Topics**
+
+****Initializing the swipe actions****
+
+`[init(actions: [UIContextualAction])](https://developer.apple.com/documentation/uikit/uiswipeactionsconfiguration/2902363-init)`
+
+Creates a swipe action configuration object with the specified set of actions.
+
+****Getting the swipe action information****
+
+`[var actions: [UIContextualAction]](https://developer.apple.com/documentation/uikit/uiswipeactionsconfiguration/2902360-actions)`
+
+The swipe actions.
+
+`[var performsFirstActionWithFullSwipe: Bool](https://developer.apple.com/documentation/uikit/uiswipeactionsconfiguration/2902361-performsfirstactionwithfullswipe)`
+
+A Boolean value indicating whether a full swipe automatically performs the first action.
+
+## **Relationships**
+
+****Inherits From****
+
+- `[NSObject](https://developer.apple.com/documentation/objectivec/nsobject)`
+- [x]  addTarget을 통해 클래스에 액션을 연결했나요?
+    
+    ![스크린샷 2022-10-28 오후 12.37.01.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/46e2891a-6592-42bf-9cb1-5abbc55eba7f/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-10-28_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_12.37.01.png)
+    
+
+- [x]  CocoaPods을 통해 Lottie를 설치했나요?
+    
+    ![스크린샷 2022-10-27 오후 7.30.45.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5086c806-7b28-47a5-ad02-419ba5b63b85/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-10-27_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7.30.45.png)
+    
+
+- [x]  원하는 새로고침 애니메이션을 구성했나요?
+    
+    ![스크린샷 2022-10-28 오전 12.09.49.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f1ef173f-5a61-495c-8e2c-9c0f0878cbb7/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-10-28_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_12.09.49.png)
+    
+
+- 미션 참고 영상
+    
+    [[Client] #5. Awesome UI & iOS - Practice](https://www.youtube.com/watch?v=7XdDsOsLqa0&list=PLKi37YIxs-7taJns3l65dDOKjgsN1upi9)
+    
+
+## ⚡ 트러블 슈팅
+
+---
+
+<aside>
+💡 실습이나 미션을 하면서 생긴 문제들에 대해서, **이슈 - 문제 - 해결** 순서로 작성해주세요.
+
+</aside>
+
+- ⚡이슈 No.1 (예시, 서식만 복사하시고 지워주세요.)
+    
+    **`이슈`**
+    
+    👉 앱 실행 중에 노래 다음 버튼을 누르니까 앱이 종료되었다.
+    
+    **`문제`**
+    
+    👉 노래클래스의 데이터리스트의 Size를 넘어서 NullPointException이 발생하여 앱이 종료된 것이었다. 
+    
+    **`해결`**
+    
+    👉  노래 다음 버튼을 눌렀을 때 데이터리스트의 Size를 검사해 Size보다 넘어가려고 하면 다음으로 넘어가는 메서드를 실행시키지 않고, 첫 노래로 돌아가게끔 해결
+    
+    **`참고 레퍼런스`**
+    
+    - 링크
+
+## 🤔 이것도 한 번 생각해봐요!
+
+---
+
+- iOS 프로젝트에서 자주 쓰이는 유명한 오픈소스로는 어떤 것들이 있고 언제 쓰면 좋을까요?
+    
+    
+- addTarget엔 changeValue, touchUpInside 말고도 여러가지 옵션이 있어요! 어떤 게 있는지 더 공부해보세요!
+    
+    
+- 스토리보드로 UI를 구성하는 방법도 있지만, 실습에서 잠깐 본 addSubview처럼 코드만으로 UI를 구성할 수도 있어요! 코드로 컴포넌트를 만들고 뷰를 구성하는 방법을 공부해보세요!
