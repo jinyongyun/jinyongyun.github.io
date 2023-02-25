@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "DOBBYNOTES"
+title                    : "JINYONG_YUN"
 title_separator          : "|"
-subtitle                 : Dobby's efforts
+subtitle                 : jinyongyun_run
 name                     : "jinyongyun"
-description              : "dobby is free spirit coder"
+description              : "I LOVE Daejeon"
 url                      :  "https://jinyongyun.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -32,7 +32,7 @@ words_per_minute         : 200
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
-    shortname            : "DOBBYNOTES"
+    shortname            : "JINYONG_YUN"
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Jinyongyun"
   avatar           : "/assets/images/DobbyRed.png"
-  bio              : "IOS JUNIOR DEVELOPER"
+  bio              : "JUNIOR DEVELOPER"
   location         : "ILOVEDaejeon"
   email            : "dbswlsdyd730@naver.com"
   links:
