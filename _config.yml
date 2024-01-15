@@ -24,7 +24,7 @@ description              : "I LOVE Daejeon"
 url                      :  "https://jinyongyun.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/images/jinyonghanglebanner.png"
+teaser                   : "/assets/images/bannerPicture.JPG"
 logo                     : "/assets/images/jinyonghanglebanner.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs            : true
@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "Jinyongyun"
-  avatar           : "/assets/images/jinyongyunpic.png"
+  avatar           : "/assets/images/yongjin.jpeg"
   bio              : "JUNIOR DEVELOPER"
   location         : "ILOVEDaejeon"
   email            : "dbswlsdyd730@naver.com"
